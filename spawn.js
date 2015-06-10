@@ -1,4 +1,4 @@
-function spawn(generatorFunc) {
+function spawn (generatorFunc) {
   function continuer(verb, arg) {
     var result;
     try {
@@ -17,3 +17,5 @@ function spawn(generatorFunc) {
   var onRejected = continuer.bind(continuer, "throw");
   return onFulfilled();
 }
+
+module.exports = spawn;
